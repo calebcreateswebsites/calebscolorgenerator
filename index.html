@@ -21,8 +21,8 @@
     }
   </style>
 </head>
-<body onclick="changeBackgroundColor()">
-  <div id="color-info">Click anywhere to change the background color!</div>
+<body>
+  <div id="color-info">Wait for the colors to dance!</div>
 
   <script>
     function changeBackgroundColor() {
@@ -47,6 +47,9 @@
       const b = parseInt(color.substring(5, 7), 16);
       return (r * 0.299 + g * 0.587 + b * 0.114);
     }
+
+    // Change background color every second
+    setInterval(changeBackgroundColor, 1000);
   </script>
 </body>
 </html>
